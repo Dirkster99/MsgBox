@@ -1,0 +1,31 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="/UserNotification;component/Themes/LightBrush.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+
+  <SolidColorBrush x:Key="MsgBox_MessageColor" Color="Black" />
+
+  <SolidColorBrush x:Key="ColorWindowBackground" Color="White" PresentationOptions:Freeze="True" />
+
+  <SolidColorBrush x:Key="SystemButtonForegroundColor" Color="Black" PresentationOptions:Freeze="True" />
+  <SolidColorBrush x:Key="SystemButtonDisabledForegroundColor" Color="Gray" PresentationOptions:Freeze="True" />
+
+  <SolidColorBrush x:Key="SystemButtonHoverForegroundColor" Color="Black" PresentationOptions:Freeze="True" />
+  <SolidColorBrush x:Key="SystemButtonHoverBackgroundColor" Color="#18000000" PresentationOptions:Freeze="True" />
+
+    <SolidColorBrush x:Key="SystemButtonPressedForegroundColor" Color="Black" PresentationOptions:Freeze="True" />
+  <SolidColorBrush x:Key="SystemButtonPressedBackgroundColor" Color="#80000000" PresentationOptions:Freeze="True" />
+
+  <SolidColorBrush x:Key="ActiveWindowBorderBrush" Color="#30000000" PresentationOptions:Freeze="True" />
+
+  <SolidColorBrush x:Key="ColorTitleForeground" Color="Black" PresentationOptions:Freeze="True" />
+
+  <SolidColorBrush x:Key="ColorContentBorder" Color="#3F000000" PresentationOptions:Freeze="True" />
+
+  <SolidColorBrush x:Key="TitleBrush" Color="White" PresentationOptions:Freeze="True" />
+
+</ResourceDictionary>
