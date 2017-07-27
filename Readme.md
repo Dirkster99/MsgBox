@@ -9,6 +9,11 @@ See http://www.msgbox.codeplex.com for more details.
 
 ## Change History:
 
+- 2017-07-28
+  Removed UserNotification and replaced it with nuget Dependency:
+  https://preview.nuget.org/packages/Dirkster.UserNotifications
+  https://github.com/Dirkster99/UserNotifications
+
 - 2015-07-29
   There are breaking changes in the way a Window Chrome is themed in WPF between .Net Version 4.0
   and .Net Version 4.5. Namely:
