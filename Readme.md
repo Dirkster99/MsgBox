@@ -7,6 +7,10 @@ and follows MVVM without compromises.
 
 See http://www.msgbox.codeplex.com for more details.
 
+##Tip
+Review App class in the Demo application to understand the service initialization:
+https://github.com/Dirkster99/MsgBox/blob/master/source/MsgBoxDemo/App.xaml.cs
+
 ## Change History:
 
 - 2017-07-28
