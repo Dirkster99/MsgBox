@@ -76,6 +76,89 @@
               Looks up a localized string similar to Close.
             </summary>
         </member>
+        <member name="T:UserNotification.Themes.ResourceKeys">
+            <summary>
+            Resource key management class to keep track of all resources
+            that can be re-styled in applications that make use of the implemented controls.
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.ControlAccentColorKey">
+            <summary>
+            Accent Color Key - This Color key is used to accent elements in the UI
+            (e.g.: Color of Activated Normal Window Frame, ResizeGrip, Focus or MouseOver input elements)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.ControlAccentBrushKey">
+            <summary>
+            Accent Brush Key - This Brush key is used to accent elements in the UI
+            (e.g.: Color of Activated Normal Window Frame, ResizeGrip, Focus or MouseOver input elements)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.ControlNormalBackgroundKey">
+            <summary>
+            Resource key of the controls normal background brush key.
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.NotificationWindowBackground">
+            <summary>
+            Background brush key of the NotificationWindow.
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.NotificationWindowBorder">
+            <summary>
+            Border brush key of the border of the NotificationWindow.
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.NotificationWindowForeground">
+            <summary>
+            Foreground brush key the border of the NotificationWindow.
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.DefaultedBorderBrush">
+            <summary>
+            Border brush key of the focused border (of the close button)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.DisabledForegroundBrush">
+            <summary>
+            Border brush key of the disabled border (of the close button)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.DisabledBackgroundBrush">
+            <summary>
+            Background brush key of the disabled control (of the close button)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.DisabledBorderBrush">
+            <summary>
+            Broder brush key of the disabled control (of the close button)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.NormalBorderBrush">
+            <summary>
+            Border brush key of the border (of the close button)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.CloseNormal">
+            <summary>
+            Normal background brush key (of the close button)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.CloseOver">
+            <summary>
+            Mouse over border brush key (of the close button)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.ClosePressed">
+            <summary>
+            Button pressed background brush key (of the close button)
+            </summary>
+        </member>
+        <member name="F:UserNotification.Themes.ResourceKeys.Image_Close_Button">
+            <summary>
+            Image resource key of the close button.
+            </summary>
+        </member>
         <member name="T:UserNotification.ViewModel.Base.ViewModelBase">
             <summary>
             Implements the <seealso cref="T:System.ComponentModel.INotifyPropertyChanged"/> interface to supply

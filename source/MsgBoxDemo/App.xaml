@@ -6,7 +6,8 @@
   <Application.Resources>
     <!--
       Include either color theme to determine the color of your GUI.
-      Review the theme files themeselves to determine the icon set (Generic or Metro) to be used.
+      Review the theme files themeselves to determine the icon set
+      (Generic or Metro) to be used.
     -->
     <ResourceDictionary Source="/MsgBoxSamples;component/LightTheme.xaml" />
     <!-- ResourceDictionary Source="/MsgBoxSamples;component/DarkTheme.xaml" / -->

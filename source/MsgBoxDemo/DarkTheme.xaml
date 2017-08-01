@@ -14,7 +14,11 @@
 
   <!-- These entries style the dark non-MsgBox standard controls, e.g. TextBlock, TextBox etc...
        These controls are normally styled via Application specific ResourceDictionary so these are
-       here only provided to complete the dark theme style and make the samples work-able whith dark theme  -->
+       here only provided to complete the dark theme style and make the samples work-able whith dark
+       theme - use a real dark theme:
+       https://github.com/Dirkster99/MLib
+    
+       for real testing with modern dark themes. -->
 
     <Style TargetType="{x:Type TextBox}">
       <Setter Property="Background" Value="Transparent" />

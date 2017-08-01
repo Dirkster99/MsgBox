@@ -1,13 +1,13 @@
 ﻿<!-- x:ClassModifier="internal" -->
 <base:NotifyableWindow x:Class="MsgBox.View.MsgBoxDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 
     xmlns:base="clr-namespace:UserNotification.View;assembly=UserNotification"    
     xmlns:behav="clr-namespace:MsgBox.Behaviour"
 
     xmlns:view="clr-namespace:MsgBox.View"
+    xmlns:reskeys="clr-namespace:MsgBox.Themes"
 
     MinHeight="100"
     MinWidth="400"
@@ -20,7 +20,8 @@
     ShowInTaskbar="False"
     WindowStartupLocation="CenterOwner"
     behav:DialogCloser.DialogResult="{Binding DialogCloseResult}"
->
+    Background="{DynamicResource {x:Static reskeys:ResourceKeys.MsgBoxDialog_BackgroundKey}}"
+    >
 
     <!-- Window.InputBindings>
 
@@ -31,12 +32,12 @@
                   Command="{Binding CopyText}" 
                   CommandParameter="{Binding Path=AllToString, Mode=OneWay}" />
   </Window.InputBindings -->
-  <Grid>
-      <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
-        <RowDefinition Height="Auto" />
-      </Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-      <view:MsgBoxView Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Grid.Row="1"/>
-  </Grid>
+        <view:MsgBoxView Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Grid.Row="1"/>
+    </Grid>
 </base:NotifyableWindow>
