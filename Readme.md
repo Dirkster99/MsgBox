@@ -1,3 +1,5 @@
+[![Release](https://img.shields.io/github/release/Dirkster99/MsgBox.svg)](https://github.com/Dirkster99/MsgBox/releases/latest)
+[![NuGet](https://img.shields.io/nuget/dt/Dirkster.MsgBox.svg)](http://nuget.org/packages/Dirkster.MsgBox)
 # Overview
 
 This project shows the implementation of a custom message box service that is driven by a
@@ -6,6 +8,10 @@ positioned pop-up messages in the vicinity of related controls. All implementati
 and follows MVVM without compromises.
 
 See http://www.msgbox.codeplex.com for more details.
+
+##Tip
+Review App class in the Demo application to understand the service initialization:
+https://github.com/Dirkster99/MsgBox/blob/master/source/MsgBoxDemo/App.xaml.cs
 
 ## Change History:
 
