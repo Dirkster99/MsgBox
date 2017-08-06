@@ -23,11 +23,24 @@
         #endregion Accent Keys
 
         #region Brush Keys
+        /// <summary>
+        /// Brush key of the message text shown in the message box.
+        /// </summary>
         public static readonly ComponentResourceKey MsgBox_MessageColor = new ComponentResourceKey(typeof(ResourceKeys), "MsgBox_MessageColor");
 
+        /// <summary>
+        /// Brush key of the background of the message box dialog.
+        /// </summary>
         public static readonly ComponentResourceKey MsgBoxDialog_BackgroundKey = new ComponentResourceKey(typeof(ResourceKeys), "MsgBoxDialog_BackgroundKey");
 
+        /// <summary>
+        /// Brush key of the background of the message view inside the message box dialog.
+        /// </summary>
         public static readonly ComponentResourceKey MsgBoxView_BackgroundKey = new ComponentResourceKey(typeof(ResourceKeys), "MsgBoxView_BackgroundKey");
+
+        /// <summary>
+        /// Brush key of the foreground of the message view inside the message box dialog.
+        /// </summary>
         public static readonly ComponentResourceKey MsgBoxView_ForegroundKey = new ComponentResourceKey(typeof(ResourceKeys), "MsgBoxView_ForegroundKey");
         #endregion Brush Keys
     }
