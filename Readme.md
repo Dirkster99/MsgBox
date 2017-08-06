@@ -13,6 +13,29 @@ See http://www.msgbox.codeplex.com for more details.
 Review App class in the Demo application to understand the service initialization:
 https://github.com/Dirkster99/MsgBox/blob/master/source/MsgBoxDemo/App.xaml.cs
 
+## Theming
+
+Load *Light* or *Dark* brush resources in you resource dictionary to take advantage of existing definitions.
+
+```XAML
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/MsgBox;component/Themes/DarkBrushs.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+```
+
+```XAML
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/MsgBox;component/Themes/LightBrushs.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+```
+
+These definitions do not theme all controls used within this library. You should use a standard theming library, such as:
+- [MahApps.Metro](https://github.com/MahApps/MahApps.Metro),
+- [MLib](https://github.com/Dirkster99/MLib), or
+- [MUI](https://github.com/firstfloorsoftware/mui)
+
+to also theme standard elements, such as, button and textblock etc.
+
 ## Change History:
 
 - 2017-07-28
