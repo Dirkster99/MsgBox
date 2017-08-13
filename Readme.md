@@ -13,6 +13,10 @@ See http://www.msgbox.codeplex.com for more details.
 Review App class in the Demo application to understand the service initialization:
 https://github.com/Dirkster99/MsgBox/blob/master/source/MsgBoxDemo/App.xaml.cs
 
+![Basic Terminilogy Screenshot](https://github.com/Dirkster99/Docu/blob/master/MsgBox/BasicTerminology.png?raw=true)
+
+![Dark Sample Screenshot](https://github.com/Dirkster99/Docu/blob/master/MsgBox/DarkMessageBoxSample.png?raw=true)
+
 ## Theming
 
 Load *Light* or *Dark* brush resources in you resource dictionary to take advantage of existing definitions.
