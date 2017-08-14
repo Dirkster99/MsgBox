@@ -1,6 +1,7 @@
 [![Release](https://img.shields.io/github/release/Dirkster99/MsgBox.svg)](https://github.com/Dirkster99/MsgBox/releases/latest)
 [![NuGet](https://img.shields.io/nuget/dt/Dirkster.MsgBox.svg)](http://nuget.org/packages/Dirkster.MsgBox)
-# Overview
+
+<h1><img src="https://github.com/Dirkster99/Docu/blob/master/MsgBox/ProjectIcon.png"/>Overview</h1>
 
 This project shows the implementation of a custom message box service that is driven by a
 service locator interface. It inlcudes a notification component that can be used to implement
