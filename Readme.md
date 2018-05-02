@@ -4,7 +4,7 @@
 
 <h1><img src="https://github.com/Dirkster99/Docu/blob/master/MsgBox/ProjectIcon.png"/>Overview</h1>
 
-This project shows the implementation of a custom message box service that is driven by a
+This project shows implements a custom message box service that is driven by a
 service locator interface. It inlcudes a notification component that can be used to implement
 positioned pop-up messages in the vicinity of related controls. All implementation is in WPF
 and follows MVVM without compromises.
