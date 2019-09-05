@@ -106,8 +106,8 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="UserNotification, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dirkster.UserNotifications.1.4.1\lib\net4\UserNotification.dll</HintPath>
+    <Reference Include="UserNotification, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dirkster.UserNotifications.1.5.1\lib\net40\UserNotification.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -171,11 +171,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MsgBox\MsgBox.csproj">
-      <Project>{2F8EF004-1E7A-429D-863B-5A062A90705A}</Project>
+      <Project>{9ef626d9-93b7-4713-be93-3b70bfcfb58b}</Project>
       <Name>MsgBox</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceLocator\ServiceLocator.csproj">
-      <Project>{1d2b2142-67d7-48ea-91f9-5e77e29b5ab9}</Project>
+    <ProjectReference Include="..\ServiceLocatorNew\ServiceLocator\ServiceLocator.csproj">
+      <Project>{4ed10dc4-4f8a-47c8-bcbd-61c22c7fe4ea}</Project>
       <Name>ServiceLocator</Name>
     </ProjectReference>
   </ItemGroup>

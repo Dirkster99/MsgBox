@@ -1,266 +1,106 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2F8EF004-1E7A-429D-863B-5A062A90705A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MsgBox</RootNamespace>
-    <AssemblyName>MsgBox</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworks>net451;netcoreapp3.0</TargetFrameworks>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\MsgBox.XML</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>bin\Release\MsgBox.XML</DocumentationFile>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>bin\Release\MsgBox.XML</DocumentationFile>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
+
+  <PropertyGroup>
+      <AssemblyTitle>MsgBox</AssemblyTitle>
+      <PackageId>Dirkster.MsgBox</PackageId>
+      <Product>Themable Message Box Service Implementation</Product>
+      <Copyright>2012 - 2019</Copyright>
+      <Company>Open Source</Company>
+      <Description>Themable user notifications WPF control through pop-up elements</Description>
+      <Version>1.5</Version>
+      <AssemblyVersion>1.5</AssemblyVersion>
+      <FileVersion>1.5</FileVersion>
+      <VersionPrefix>1.5</VersionPrefix>
+      <PackageProjectUrl>https://github.com/Dirkster99/MsgBox</PackageProjectUrl>
+      <RepositoryUrl>https://github.com/Dirkster99/MsgBox</RepositoryUrl>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <PackageTags>wpf mvvm c# .net metro dark light themed control library messagebox service API</PackageTags>
+      <IconUrl>https://raw.githubusercontent.com/Dirkster99/Docu/master/MsgBox/ProjectIcon.png</IconUrl>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <PackageReleaseNotes>Package Update with support based on .NetCore 3 Preview 8 and .Net4.5.</PackageReleaseNotes>
+      <NeutralLanguage>en</NeutralLanguage>
+    </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="UserNotification, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dirkster.UserNotifications.1.4.1\lib\net4\UserNotification.dll</HintPath>
-    </Reference>
-    <Reference Include="WindowsBase" />
+    <None Remove="Images\Metro\Dark\appbar.cancel.png" />
+    <None Remove="Images\Metro\Dark\appbar.check.png" />
+    <None Remove="Images\Metro\Dark\appbar.information.png" />
+    <None Remove="Images\Metro\Dark\appbar.lightbulb.hue.on.png" />
+    <None Remove="Images\Metro\Dark\appbar.lightbulb.hue.png" />
+    <None Remove="Images\Metro\Dark\appbar.lightbulb.png" />
+    <None Remove="Images\Metro\Dark\appbar.lightning.png" />
+    <None Remove="Images\Metro\Dark\appbar.noentry.png" />
+    <None Remove="Images\Metro\Dark\appbar.question.png" />
+    <None Remove="Images\Metro\Dark\appbar.sign.stop.png" />
+    <None Remove="Images\Metro\Dark\appbar.stop.png" />
+    <None Remove="Images\Metro\Dark\appbar.warning.circle.png" />
+    <None Remove="Images\Metro\Dark\appbar.warning.png" />
+    <None Remove="Images\Metro\Light\appbar.cancel.png" />
+    <None Remove="Images\Metro\Light\appbar.check.png" />
+    <None Remove="Images\Metro\Light\appbar.information.png" />
+    <None Remove="Images\Metro\Light\appbar.lightbulb.hue.on.png" />
+    <None Remove="Images\Metro\Light\appbar.lightbulb.hue.png" />
+    <None Remove="Images\Metro\Light\appbar.lightbulb.png" />
+    <None Remove="Images\Metro\Light\appbar.lightning.png" />
+    <None Remove="Images\Metro\Light\appbar.noentry.png" />
+    <None Remove="Images\Metro\Light\appbar.question.png" />
+    <None Remove="Images\Metro\Light\appbar.sign.stop.png" />
+    <None Remove="Images\Metro\Light\appbar.stop.png" />
+    <None Remove="Images\Metro\Light\appbar.warning.circle.png" />
+    <None Remove="Images\Metro\Light\appbar.warning.png" />
+    <None Remove="Images\Metro\SVG\appbar.cancel.svg" />
+    <None Remove="Images\Metro\SVG\appbar.check.svg" />
+    <None Remove="Images\Metro\SVG\appbar.information.svg" />
+    <None Remove="Images\Metro\SVG\appbar.lightbulb.hue.on.svg" />
+    <None Remove="Images\Metro\SVG\appbar.lightbulb.hue.svg" />
+    <None Remove="Images\Metro\SVG\appbar.lightbulb.svg" />
+    <None Remove="Images\Metro\SVG\appbar.lightning.svg" />
+    <None Remove="Images\Metro\SVG\appbar.noentry.svg" />
+    <None Remove="Images\Metro\SVG\appbar.question.svg" />
+    <None Remove="Images\Metro\SVG\appbar.sign.stop.svg" />
+    <None Remove="Images\Metro\SVG\appbar.stop.svg" />
+    <None Remove="Images\Metro\SVG\appbar.warning.circle.svg" />
+    <None Remove="Images\Metro\SVG\appbar.warning.svg" />
+    <None Remove="Images\MsgBoxImages\48px-Dialog-accept.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Dialog-error-round.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Dialog-error.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Dialog-information.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Dialog-information_on.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Dialog-information_red.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Emblem-important-red.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Emblem-important-yellow.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Emblem-important.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Emblem-notice.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Help-browser.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Process-stop.svg.png" />
+    <None Remove="Images\MsgBoxImages\48px-Software-update-urgent.svg.png" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="Commands\RelayCommand.cs" />
-    <Compile Include="Converter\ImageEnumToVisibilityConverter.cs" />
-    <Compile Include="Converter\ImageEnumToImageConverter.cs" />
-    <Compile Include="Enums\MsgBoxStyle.cs" />
-    <Compile Include="IMessageBoxService.cs" />
-    <Compile Include="MessageBoxService.cs" />
-    <Compile Include="Behaviour\DialogCloser.cs" />
-    <Compile Include="Converter\EnumMatchToBooleanConverter.cs" />
-    <Compile Include="Behaviour\SetKeyboardFocusWhenIsDefault.cs" />
-    <Compile Include="Local\Strings.de-DE.Designer.cs">
-      <DependentUpon>Strings.de-DE.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Local\Strings.zh-Hans.Designer.cs">
-      <DependentUpon>Strings.zh-Hans.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Local\Strings.hi.Designer.cs">
-      <DependentUpon>Strings.hi.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Local\Strings.it-IT.Designer.cs">
-      <DependentUpon>Strings.it-IT.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Local\Strings.es-ES.Designer.cs">
-      <DependentUpon>Strings.es-ES.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Local\Strings.fr-FR.Designer.cs">
-      <DependentUpon>Strings.fr-FR.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Local\Strings.nl-NL.Designer.cs">
-      <DependentUpon>Strings.nl-NL.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Local\Strings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Strings.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Internal\ViewModel\Base\BaseViewModel.cs" />
-    <Compile Include="IconHelper.cs" />
-    <Compile Include="Internal\ViewModel\MessageBoxViewModel.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Enums\MsgBoxButtons.cs" />
-    <Compile Include="Enums\MsgBoxImage.cs" />
-    <Compile Include="Enums\MsgBoxResult.cs" />
-    <Compile Include="Themes\ResourceKeys.cs" />
-    <Compile Include="View\Modern\Behavior\ModernDialogCloser.cs" />
-    <Compile Include="View\Modern\ModernDialog.cs" />
-    <Compile Include="View\Modern\Windows\Converters\BooleanToFontWeightConverter.cs" />
-    <Compile Include="View\Modern\Windows\Converters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="View\Modern\Windows\Converters\NullToVisibilityConverter.cs" />
-    <Compile Include="View\Modern\Windows\Converters\ToLowerConverter.cs" />
-    <Compile Include="View\Modern\Windows\Converters\ToUpperConverter.cs" />
-    <Compile Include="View\MsgBoxDialog.xaml.cs">
-      <DependentUpon>MsgBoxDialog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\MsgBoxView.xaml.cs">
-      <DependentUpon>MsgBoxView.xaml</DependentUpon>
-    </Compile>
+    <Content Include="Images\Metro\SVG\appbar.cancel.svg" />
+    <Content Include="Images\Metro\SVG\appbar.check.svg" />
+    <Content Include="Images\Metro\SVG\appbar.information.svg" />
+    <Content Include="Images\Metro\SVG\appbar.lightbulb.hue.on.svg" />
+    <Content Include="Images\Metro\SVG\appbar.lightbulb.hue.svg" />
+    <Content Include="Images\Metro\SVG\appbar.lightbulb.svg" />
+    <Content Include="Images\Metro\SVG\appbar.lightning.svg" />
+    <Content Include="Images\Metro\SVG\appbar.noentry.svg" />
+    <Content Include="Images\Metro\SVG\appbar.question.svg" />
+    <Content Include="Images\Metro\SVG\appbar.sign.stop.svg" />
+    <Content Include="Images\Metro\SVG\appbar.stop.svg" />
+    <Content Include="Images\Metro\SVG\appbar.warning.circle.svg" />
+    <Content Include="Images\Metro\SVG\appbar.warning.svg" />
   </ItemGroup>
+
   <ItemGroup>
-    <Resource Include="Images\MsgBoxImages\48px-Dialog-error-round.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Dialog-error.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Dialog-information.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Dialog-information_on.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Dialog-information_red.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Emblem-important-red.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Emblem-important-yellow.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Emblem-important.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Help-browser.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Process-stop.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Software-update-urgent.svg.png" />
+    <PackageReference Include="Dirkster.UserNotifications" Version="1.5.1" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MsgBoxImages\48px-Dialog-accept.svg.png" />
-    <Resource Include="Images\MsgBoxImages\48px-Emblem-notice.svg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Local\Strings.de-DE.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.de-DE.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Local\Strings.zh-Hans.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.zh-Hans.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Local\Strings.hi.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.hi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Local\Strings.it-IT.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.it-IT.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Local\Strings.es-ES.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.es-ES.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Local\Strings.fr-FR.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.fr-FR.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Local\Strings.nl-NL.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.nl-NL.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Local\Strings.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Themes\LightIcons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\DarkIcons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\DarkBrushes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\LightBrushes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Modern\Themes\Button.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Modern\Themes\Converters.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Modern\Themes\ModernDialog.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Modern\Themes\ModernUI.Dark.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Modern\Themes\ModernUI.Light.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\MsgBoxDialog.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\MsgBoxView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
+
   <ItemGroup>
     <Resource Include="Images\Metro\Dark\appbar.cancel.png" />
     <Resource Include="Images\Metro\Dark\appbar.check.png" />
@@ -288,30 +128,143 @@
     <Resource Include="Images\Metro\Light\appbar.stop.png" />
     <Resource Include="Images\Metro\Light\appbar.warning.circle.png" />
     <Resource Include="Images\Metro\Light\appbar.warning.png" />
-    <Content Include="Images\Metro\SVG\appbar.cancel.svg" />
-    <Content Include="Images\Metro\SVG\appbar.check.svg" />
-    <Content Include="Images\Metro\SVG\appbar.information.svg" />
-    <Content Include="Images\Metro\SVG\appbar.lightbulb.hue.on.svg" />
-    <Content Include="Images\Metro\SVG\appbar.lightbulb.hue.svg" />
-    <Content Include="Images\Metro\SVG\appbar.lightbulb.svg" />
-    <Content Include="Images\Metro\SVG\appbar.lightning.svg" />
-    <Content Include="Images\Metro\SVG\appbar.noentry.svg" />
-    <Content Include="Images\Metro\SVG\appbar.question.svg" />
-    <Content Include="Images\Metro\SVG\appbar.sign.stop.svg" />
-    <Content Include="Images\Metro\SVG\appbar.stop.svg" />
-    <Content Include="Images\Metro\SVG\appbar.warning.circle.svg" />
-    <Content Include="Images\Metro\SVG\appbar.warning.svg" />
+    <Resource Include="Images\MsgBoxImages\48px-Dialog-accept.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Dialog-error-round.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Dialog-error.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Dialog-information.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Dialog-information_on.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Dialog-information_red.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Emblem-important-red.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Emblem-important-yellow.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Emblem-important.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Emblem-notice.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Help-browser.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Process-stop.svg.png" />
+    <Resource Include="Images\MsgBoxImages\48px-Software-update-urgent.svg.png" />
   </ItemGroup>
+
   <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Update="Local\Strings.de-DE.Designer.cs">
+      <DependentUpon>Strings.de-DE.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Local\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Local\Strings.es-ES.Designer.cs">
+      <DependentUpon>Strings.es-ES.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Local\Strings.fr-FR.Designer.cs">
+      <DependentUpon>Strings.fr-FR.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Local\Strings.hi.Designer.cs">
+      <DependentUpon>Strings.hi.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Local\Strings.it-IT.Designer.cs">
+      <DependentUpon>Strings.it-IT.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Local\Strings.nl-NL.Designer.cs">
+      <DependentUpon>Strings.nl-NL.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Local\Strings.zh-Hans.Designer.cs">
+      <DependentUpon>Strings.zh-Hans.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="View\MsgBoxDialog.xaml.cs">
+      <DependentUpon>MsgBoxDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\MsgBoxView.xaml.cs">
+      <DependentUpon>MsgBoxView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- Import Project="$(ProgramFiles)\MSBuild\StyleCop\v4.7\StyleCop.Targets" / -->
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
+  <ItemGroup>
+    <EmbeddedResource Update="Local\Strings.de-DE.resx">
+      <LastGenOutput>Strings.de-DE.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Local\Strings.es-ES.resx">
+      <LastGenOutput>Strings.es-ES.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Local\Strings.fr-FR.resx">
+      <LastGenOutput>Strings.fr-FR.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Local\Strings.hi.resx">
+      <LastGenOutput>Strings.hi.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Local\Strings.it-IT.resx">
+      <LastGenOutput>Strings.it-IT.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Local\Strings.nl-NL.resx">
+      <LastGenOutput>Strings.nl-NL.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Local\Strings.resx">
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Local\Strings.zh-Hans.resx">
+      <LastGenOutput>Strings.zh-Hans.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\DarkBrushes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\DarkIcons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Themes\LightBrushes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\LightIcons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Modern\Themes\Button.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Modern\Themes\Converters.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Modern\Themes\ModernDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Modern\Themes\ModernUI.Dark.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Modern\Themes\ModernUI.Light.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MsgBoxDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MsgBoxView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>
