@@ -15,14 +15,6 @@
         {
             this.InitializeComponent();
 
-            ////Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            ////Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-
-            ////Thread.CurrentThread.CurrentCulture = new CultureInfo("de-DE");
-            ////Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");
-
-            ServiceContainer.Instance.AddService<IMessageBoxService>(new MessageBoxService());
-
             this.DataContext = new MsgBoxTestViewModel();
         }
         #endregion constructor
