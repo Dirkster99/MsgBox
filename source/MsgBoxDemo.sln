@@ -2,13 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLocatorOld", "ServiceLocator\ServiceLocatorOld.csproj", "{1D2B2142-67D7-48EA-91F9-5E77E29B5AB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsgBoxDemo", "MsgBoxDemo\MsgBoxDemo.csproj", "{B0E080CC-C19D-4EF1-9EDC-E2DA4D80653C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsgBox", "MsgBox\MsgBox.csproj", "{9EF626D9-93B7-4713-BE93-3B70BFCFB58B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLocator", "ServiceLocatorNew\ServiceLocator\ServiceLocator.csproj", "{4ED10DC4-4F8A-47C8-BCBD-61C22C7FE4EA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsgBoxDemo", "MsgBoxDemoNew\MsgBoxDemo\MsgBoxDemo.csproj", "{B0E080CC-C19D-4EF1-9EDC-E2DA4D80653C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLocator", "ServiceLocator\ServiceLocator.csproj", "{4ED10DC4-4F8A-47C8-BCBD-61C22C7FE4EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,20 +1,30 @@
 ﻿namespace MsgBoxSamples
 {
-  using System.Windows;
-  using MsgBoxSamples.ViewModel;
+    using System.Windows;
+    using MsgBox;
+    using MsgBoxSamples.ViewModel;
+    using ServiceLocator;
 
-  /// <summary>
-  /// Interaction logic for Window1.xaml
-  /// </summary>
-  public partial class MainWindow : Window
-  {
-    #region constructor
-    public MainWindow()
+    /// <summary>
+    /// Interaction logic for Window1.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
-      this.InitializeComponent();
+        #region constructor
+        public MainWindow()
+        {
+            this.InitializeComponent();
 
-      this.DataContext = new MsgBoxTestViewModel();
+            ////Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            ////Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+
+            ////Thread.CurrentThread.CurrentCulture = new CultureInfo("de-DE");
+            ////Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");
+
+            ServiceContainer.Instance.AddService<IMessageBoxService>(new MessageBoxService());
+
+            this.DataContext = new MsgBoxTestViewModel();
+        }
+        #endregion constructor
     }
-    #endregion constructor
-  }
 }

@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\MsgBox\MsgBox.csproj" />
-    <ProjectReference Include="..\..\ServiceLocatorNew\ServiceLocator\ServiceLocator.csproj" />
+    <ProjectReference Include="..\MsgBox\MsgBox.csproj" />
+    <ProjectReference Include="..\ServiceLocator\ServiceLocator.csproj" />
   </ItemGroup>
 
   <ItemGroup>
