@@ -2,6 +2,8 @@
 [![Release](https://img.shields.io/github/release/Dirkster99/MsgBox.svg)](https://github.com/Dirkster99/MsgBox/releases/latest)
 [![NuGet](https://img.shields.io/nuget/dt/Dirkster.MsgBox.svg)](http://nuget.org/packages/Dirkster.MsgBox)
 
+![Net4](https://badgen.net/badge/Framework/.Net&nbsp;4/blue) ![NetCore3](https://badgen.net/badge/Framework/NetCore&nbsp;3/blue)
+
 <h1><img src="https://github.com/Dirkster99/Docu/blob/master/MsgBox/ProjectIcon.png"/>Overview</h1>
 
 This project shows implements a custom message box service that is driven by a
