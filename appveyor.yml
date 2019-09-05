@@ -1,0 +1,27 @@
+version: 1.5.{build}
+
+branches:
+  only:
+  - master
+  
+before_build:
+  - cmd: nuget restore source/MsgBoxDemo.sln
+
+build:
+  verbosity: minimal
+
+configuration: Release
+
+platform: Any CPU
+
+image: Visual Studio 2019 Preview
+
+install:
+  - cmd: choco install dotnetcore-sdk --pre
+
+artifacts:
+- path: source\MsgBoxDemo\bin\Release
+  name: MsgBoxDemo
+
+- path: source\MsgBox\bin\Release
+  name: MsgBox

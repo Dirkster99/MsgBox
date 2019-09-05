@@ -12,13 +12,6 @@
 	{
 		public App()
 		{
-			////Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-			////Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-
-			////Thread.CurrentThread.CurrentCulture = new CultureInfo("de-DE");
-			////Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");
-
-			ServiceContainer.Instance.AddService<IMessageBoxService>(new MessageBoxService());
 		}
 
 		private void App_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
