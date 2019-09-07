@@ -20,7 +20,7 @@
       <RepositoryUrl>https://github.com/Dirkster99/MsgBox</RepositoryUrl>
       <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
       <PackageTags>wpf mvvm c# .net metro dark light themed control library messagebox service API</PackageTags>
-      <IconUrl>https://raw.githubusercontent.com/Dirkster99/Docu/master/MsgBox/ProjectIcon.png</IconUrl>
+      <PackageIconUrl>https://raw.githubusercontent.com/Dirkster99/Docu/master/MsgBox/ProjectIcon.png</PackageIconUrl>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <PackageReleaseNotes>Package Update with support based on .NetCore 3 Preview 8 and .Net4.5.</PackageReleaseNotes>
       <NeutralLanguage>en</NeutralLanguage>
